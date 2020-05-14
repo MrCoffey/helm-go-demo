@@ -17,13 +17,19 @@ docker push coffey0container/demo:latest
 kubectl run demo --image=coffey0container/demo:latest --generator=run-pod/v1 --dry-run -o yaml > pod.yaml
 ```
 
-2.) Expose the service:
+2.) Create the pod
+
+```bash
+kubectl create -f pod.yaml
+```
+
+3.) Expose the pod:
 
 ```bash
 kubectl expose pod/demo --name=demo-service
 ```
 
-3.) Port forward the service:
+4.) Port forward the service:
 
 ```bash
 k port-forward service/demo-service 8000:8000
