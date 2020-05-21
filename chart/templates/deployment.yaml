@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: {{ $.Chart.Name }}
+  name: {{ $.Values.app.name }}-deployment
+  namespace:  {{ $.Values.app.namespace }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ $.Chart.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ $.Chart.Name }}
+    spec:
+      containers:
+      - image: {{ $.Values.app.image }}
+        name: {{ $.Values.app.tag }}
+        ports:
+          - containerPort: {{ $.Values.app.port }}
+        env:
+        - name: CUSTOM_NAME
+          value: "Otto"
+        resources: {}
+status: {}

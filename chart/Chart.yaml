@@ -1,0 +1,10 @@
+name: demo
+version: 1.0.1
+sources:
+- https://github.com/MrCoffey/demo
+maintainer:
+- name: Jorge Madrid
+  email: jorge@liftit.co
+appVersion: 1.0.1
+deprecated: false
+engine: gotpl
