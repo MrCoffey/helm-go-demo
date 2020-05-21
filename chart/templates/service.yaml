@@ -13,6 +13,6 @@ spec:
   selector:
     app: {{ $.Chart.Name }}
   sessionAffinity: None
-  type: ClusterIP
+  type: {{ $.Values.service.type }}
 status:
   loadBalancer: {}
