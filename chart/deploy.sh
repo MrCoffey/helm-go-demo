@@ -1,0 +1,1 @@
+helm secrets upgrade --install demo . -f values.yaml -f secrets/secrets.qa.yaml

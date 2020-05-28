@@ -10,3 +10,8 @@ service:
   port: 8000
   targetPort: 8000
   type: ClusterIP
+
+secret:
+  enabled: true
+  name: demo-secret
+  path: secrets/qa.yaml
