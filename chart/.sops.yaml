@@ -1,3 +1,0 @@
----
-creation_rules:
-  - gcp_kms: projects/liftit-os/locations/us-east1/keyRings/ring-helm-sandbox/cryptoKeys/helm-key

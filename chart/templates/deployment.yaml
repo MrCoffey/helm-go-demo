@@ -22,9 +22,6 @@ spec:
           - containerPort: {{ $.Values.app.port }}
         env:
         - name: CUSTOM_NAME
-          valueFrom:
-            secretKeyRef:
-              name: {{ $.Values.secret.name }}
-              key: custom_name
+          value: "Otto"
         resources: {}
 status: {}
