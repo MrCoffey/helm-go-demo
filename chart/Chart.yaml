@@ -1,0 +1,7 @@
+name: demo
+version: 1.0.1
+sources:
+- https://github.com/MrCoffey/demo
+appVersion: 1.0.1
+deprecated: false
+engine: gotpl

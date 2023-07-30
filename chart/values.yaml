@@ -1,0 +1,12 @@
+app:
+  name: demo
+  namespace: demo-qa
+  image: coffey0container/demo
+  tag: latest
+  replicas: 1
+  port: 8000
+
+service:
+  port: 8000
+  targetPort: 8000
+  type: ClusterIP
